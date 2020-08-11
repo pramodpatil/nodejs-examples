@@ -1,0 +1,9 @@
+extends layout.pug
+block content
+    form(action="/" method="POST")
+        <div>
+            label(for="name") Enter your name <br>
+            input(type="text" id="name", name="username")
+        </div>
+        <br>
+        button(type="submit") Add

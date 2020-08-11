@@ -1,0 +1,9 @@
+extends layout.pug
+block content
+    if usernames.length > 0
+        h2 List of user names
+        ul
+            each username in usernames
+                li #{username.name}
+    else
+        h2 No user names
