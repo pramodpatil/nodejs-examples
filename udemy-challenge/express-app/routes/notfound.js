@@ -6,13 +6,10 @@ const express = require('express');
 
 //utils module import
 const rootDir = require('../utils/path');
+const errorController = require('../controller/error-controller');
 
 const router = express.Router();
 
-router.use('/', (req, res, next) => {
-    //res.sendFile(path.join(__dirname, '../', 'views', 'page-not-found.html'));
-    //res.sendFile(path.join(rootDir, 'views', 'page-not-found.html'));
-    res.render('404.pug', {pageTitle: 'Page not found'});
-});
+router.use('/', errorController.get404);
 
 module.exports = router;

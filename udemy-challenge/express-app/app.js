@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 //use public resources
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/admin', adminRoutes.router);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 // add 404 page for all other pages
 app.use(pageNotFoundRoute);
